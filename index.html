@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>Luxury blinds of miami </title>
+
+
+<!--Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+<!--Google font-->
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+	<!--Custom css -->
+	<link rel="stylesheet" href="css/style.css">
+
+ <!-- Compiled and minified Jquery-->
+  <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+ <!-- Compiled and minified icons-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Compiled and minified CSS Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript Materialize-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">LuxuryBlinds</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+	<div id="bg">
+		<img src="img/header.jpg">
+	</div>
+
+	<!--List companies that have trusted us-->
+	<div class="trusted">
+	   <div class="center-align"> 
+				<p style="color:grey; margin:0px"> Trusted by:</p>
+				<br>
+
+				<img  class="logo" src="img/bk.png">
+				<img class="logo" src="img/cal.svg">
+				<img class="logo " src="img/deb.png">
+				<img class="logo" src="img/Nick.svg">
+	
+	   </div>
+   </div>
+
+   <!--Product Showcase -->
+   <div class="products" id="products">
+  				<br>
+				<p class="title">Choose from one of the styles below, and add a touch of luxury to your home.</p> <div class="chip">
+    We have more styles, just give us a call!
+    <i class="material-icons">close</i>
+  </div>      
+				<br>
+			
+		<div class="row">				
+			<div class=" col s6">
+				<div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="img/roll.jpg">
+				    </div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">Roll-Up Shades<i class="material-icons right">more_vert</i></span>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">Roll-Up Shades<i class="material-icons right">close</i></span>
+				      <p>Add an elegant touch to your home with these shades. Block up to 90% of UV rays and reduce your electricity bill.</p>
+				    </div>
+			  </div>          
+			</div>
+	        <div class=" col s6">
+				<div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="img/roman.jpg">
+				    </div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">Roman Shades<i class="material-icons right">more_vert</i></span>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">Roman Shades<i class="material-icons right">close</i></span>
+				      <p>Roman shades are ideal for any room. We have many styles to match any decor.</p>
+				    </div>
+			  </div> 
+			  </div>         
+			</div>
+			<div class="row">
+				<div class=" col s6">
+				 <div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="img/wood.jpg">
+				    </div>
+				    <div class="card-content">
+				     <span class="card-title activator grey-text text-darken-4">Wood Blinds<i class="material-icons right">more_vert</i></span>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">Wood Blinds<i class="material-icons right">close</i></span>
+				      <p>Wood blinds are very durable and are tough against the Florida sun. We have many finishes to match your home decor.</p>
+				    </div>
+			  </div>          
+			</div>
+				<div class=" col s6">
+				<div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="img/neo.jpg">
+				    </div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">Neolux Shades<i class="material-icons right">more_vert</i></span>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">Neolux Shades<i class="material-icons right">close</i></span>
+				      <p>Neolux is the latest type of window covering solution. If you want to add a touch of modern to your home these are the shades to use.</p>
+				    </div>
+			  </div>          
+			</div>
+		</div>
+	</div>
+<!--angular app for contact form and contact-->
+<div ng-app ng-init="sqty=1;lqty=1;cost=2;motors=false">
+		  <!--Calculator-->
+	<div class="calculator" id="calculator">
+         <br>
+			<p class="title">Use our cost calculator to estimate your costs.<div class="chip">
+    Remember this is just an estimate we can provide discounts!
+    <i class="material-icons">close</i>
+  </div>      </p>
+			<br>
+			<br>
+		<div class="container center-align">
+			<div id="feature-table" class="card light">
+
+		  <div>
+		    Number of medium windows: <input type="number" min="0" ng-model="sqty">
+		  </div>
+		  <div>
+		    Number of small windows:  <input type="number" min="0" ng-model="lqty">
+		  </div>
+		  <div>
+		      <input type="checkbox" class="filled-in" id="filled-in-box" ng-model="motors"/>
+		      <label for="filled-in-box">Motors</label>
+		  </div>
+		  <div ng-if="motors==true">
+		  {{motors}}
+		    <b>Total:</b> {{ sqty * 5 + lqty *10 +1000| currency}}
+		  </div>
+		  <div ng-if="motors==''">
+		  	{{motors}}
+			<b>Total:</b> {{sqty * 5 + lqty *10 | currency}}
+		  </div>
+		</div>
+		</div>
+      </div>
+	<!--contact form-->
+<div class="contact" id="contact">	  
+	<p class="title">Contact</p>
+	<br>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="name" type="text" class="validate">
+          <label for="first_name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate">
+          <label for="email">email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" placeholder="I want a free quote!" class="materialize-textarea"></textarea>
+        </div>
+      </div>
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+        
+    </form>
+  </div>
+  </div>    
+ </div> 
+</body>
+</html>
